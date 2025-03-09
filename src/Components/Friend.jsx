@@ -8,18 +8,20 @@ function Friend({ imgSrc, name, moneyStatus, current, setCurrent }) {
   }
   return (
     <div className="friendCard">
-      <img src={imgSrc} alt="profile image" />
-      <div className="friendContainer">
-        <h1>{name}</h1>
-        {moneyStatus > 0 ? (
-          <p style={{ color: "green" }}>
-            {current} own you{moneyStatus}$
-          </p>
-        ) : (
-          <p style={{ color: "red" }}>
-            You own {current} {moneyStatus * -1}$
-          </p>
-        )}
+      <div className="r">
+        <img src={imgSrc} alt="profile image" />
+        <div className="friendContainer">
+          <h1>{name}</h1>
+          {moneyStatus > 0 ? (
+            <p style={{ color: "green" }}>
+              {current} own you{moneyStatus}$
+            </p>
+          ) : (
+            <p style={{ color: "red" }}>
+              You own {current} {moneyStatus * -1}$
+            </p>
+          )}
+        </div>
       </div>
 
       <button onClick={() => handleClick()}>

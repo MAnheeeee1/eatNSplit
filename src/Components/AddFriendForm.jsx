@@ -14,17 +14,20 @@ function AddFriendForm({ setFriendList, friendList }) {
     setFriendName("");
   }
   return (
-    <div>
-      <label>
-        Friend name{" "}
+    <div className="addFriend">
+      <div className="inputpair">
+        <label for="name">Friend name </label>
         <input
+          id="name"
           value={friendName}
           onChange={(e) => setFriendName(e.target.value)}
         />
-      </label>
-      <label>
-        Image Url <input value={url} onChange={(e) => setUrl(e.target.value)} />
-      </label>
+      </div>
+      <div className="inputpair">
+        <label for="url">Image Url </label>
+        <input id="url" value={url} onChange={(e) => setUrl(e.target.value)} />
+      </div>
+
       <button onClick={() => handleClick()}>Add</button>
     </div>
   );
