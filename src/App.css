@@ -1,0 +1,12 @@
+.listofFriend {
+  display: flex;
+  flex-direction: column;
+}
+
+.friendCard {
+  display: flex;
+}
+
+.friendCard h1 {
+  font-size: 1rem;
+}
